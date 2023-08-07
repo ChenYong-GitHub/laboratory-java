@@ -24,7 +24,7 @@ public class MySQLBinlogListener {
                 TableMapEventData tableMapEventData = (TableMapEventData) data;
                 String database = tableMapEventData.getDatabase();
                 String table = tableMapEventData.getTable();
-                if (table.equals("temporary")) {
+                if ("temporary".equals(table)) {
                     System.out.println("database:" + database);
                     System.out.println("table:" + table);
                 }
